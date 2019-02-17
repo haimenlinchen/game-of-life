@@ -45,9 +45,9 @@ public class WhenYouCreateANewUniverse {
     @Test
     public void aUniverseSeededWithAGridContainingASingleLiveCellContentWillSpawnAnEmptyGrid() {
 
-        String seededGrid = "...\n" + ".*.\n" + "...\n";
+        String seededGrid = "...\n" + ".*.\n" + "...\n\n";
 
-        String expectedGrid = "...\n" + "...\n" + "...\n";
+        String expectedGrid = "...\n" + "...\n" + "...\n\n";
 
         Universe theUniverse = new Universe(seededWith(seededGrid));
         theUniverse.spawnsANewGeneration();
@@ -68,9 +68,9 @@ public class WhenYouCreateANewUniverse {
     @Test
     public void aUniverseSpawnsANewGridInTheNextGeneration() {
 
-        String seededGrid = "...\n" + "***\n" + "...\n";
+        String seededGrid = "...\n" + "***\n" + "...\n\n";
 
-        String expectedNextGeneration = ".*.\n" + ".*.\n" + ".*.\n";
+        String expectedNextGeneration = ".*.\n" + ".*.\n" + ".*.\n\n";
 
         Universe theUniverse = new Universe(seededWith(seededGrid));
         theUniverse.createNextGeneration();
